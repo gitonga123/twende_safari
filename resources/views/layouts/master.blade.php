@@ -1,36 +1,41 @@
-<html>
-<head>
-    <title> @yield('title') </title>
 
-    <!-- Material Design fonts -->
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700">
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/icon?family=Material+Icons">
+<!doctype html>
+<html lang="{{ app()->getLocale() }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="https://getbootstrap.com/favicon.ico">
 
-    <!-- Bootstrap -->
-    <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>@yield('title')</title>
 
-    <!-- Bootstrap Material Design -->
-    <link rel="stylesheet" type="text/css" href="/css/bootstrap-material-design.css">
-    <link rel="stylesheet" type="text/css" href="/css/ripples.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="https://getbootstrap.com/docs/4.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
+    <!-- Custom styles for this template -->
+    <style>
+        body {
+            padding-top: 3.5rem;
+        }
+    </style>
+  </head>
+  <body>
 
-</head>
-<body>
+    @include('shared.navbar')
 
-@include('shared.navbar')
+    <main role="main">
+     @yield('content')
+    </main>
 
-@yield('content')
-
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-<script src="/js/ripples.min.js"></script>
-<script src="/js/material.min.js"></script>
-<script>
-    $(document).ready(function() {
-        // This command is used to initialize some elements and make them work properly
-        $.material.init();
-    });
-</script>
-</body>
-
+    @include('shared.footer')
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="https://getbootstrap.com/docs/4.1/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="https://getbootstrap.com/docs/4.1/assets/js/vendor/popper.min.js"></script>
+    <script src="https://getbootstrap.com/docs/4.1/dist/js/bootstrap.min.js"></script>
+  </body>
 </html>
