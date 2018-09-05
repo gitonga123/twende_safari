@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title', 'Home Page| Welcome')
+@section('title', 'Home Page | Welcome')
 @section('content')
 
 <!-- Main jumbotron for a primary marketing message or call to action -->
