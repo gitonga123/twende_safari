@@ -43,13 +43,13 @@ Route::get('/named', function () {
 Route::prefix('admin')->group(function () {
     Route::get('/group1', function () {
         echo "Group 1";
-    });
+    })->name('group1');
 
     Route::get('/group2', function () {
         echo "Group 2";
-    });
+    })->name('group2');
 
     Route::get('/group/3', function () {
         echo "Group 3";
-    });
+    })->name('group3');
 });
