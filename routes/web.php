@@ -32,6 +32,9 @@ Route::redirect('/dials', '/home');
 //Name Routes
 Route::get('/testing/{name}', function ($name) {
     echo "Route name is {$name}";
-})->name('profile');
+})->name('profile')->where(['name' => '[a-z]+']);
 
 //Generating URLs To Named Routes
+Route::get('/named', function () {
+    return redirect()->route('profile', ['name' => "james"]);
+});
