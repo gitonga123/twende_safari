@@ -38,3 +38,18 @@ Route::get('/testing/{name}', function ($name) {
 Route::get('/named', function () {
     return redirect()->route('profile', ['name' => "james"]);
 });
+
+//Route Prefix
+Route::prefix('admin')->group(function () {
+    Route::get('/group1', function () {
+        echo "Group 1";
+    });
+
+    Route::get('/group2', function () {
+        echo "Group 2";
+    });
+
+    Route::get('/group/3', function () {
+        echo "Group 3";
+    });
+});
