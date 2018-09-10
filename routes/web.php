@@ -70,3 +70,4 @@ Route::get('/user/profile', function () {
 })->middleware('age');
 
 Route::get('users/{id}', 'UserController@show')->name('profile');
+Route::apiResources(['carList' => 'CarController@carList']);
