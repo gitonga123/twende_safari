@@ -60,5 +60,6 @@ Route::get('/trick', function () {
 
 //Route Model Biding
 Route::get('api/users/{user}', function (App\User $user) {
-    return $user->email;
+    $email = array("id" => $user->email);
+    return json_encode($email);
 });
