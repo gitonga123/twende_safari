@@ -65,6 +65,8 @@ Route::get('api/users/{user}', function (App\User $user) {
 });
 
 //Assigning Middleware to Routes
-Route::get('/users/profile', function () {
+Route::get('/user/profile', function () {
     echo "Am In the Profile URL";
 })->middleware('age');
+
+Route::get('users/{id}', 'UserController@show')->name('profile');
