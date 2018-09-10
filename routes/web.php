@@ -53,3 +53,12 @@ Route::prefix('admin')->group(function () {
         echo "Group 3";
     })->name('group3');
 });
+
+Route::get('/trick', function () {
+    return redirect()->route('group2');
+})->name("tricks");
+
+//Route Model Biding
+Route::get('api/users/{user}', function (App\User $user) {
+    return $user->email;
+});
