@@ -63,3 +63,8 @@ Route::get('api/users/{user}', function (App\User $user) {
     $email = array("id" => $user->email);
     return json_encode($email);
 });
+
+//Assigning Middleware to Routes
+Route::get('/users/profile', function () {
+    echo "Am In the Profile URL";
+})->middleware('age');
