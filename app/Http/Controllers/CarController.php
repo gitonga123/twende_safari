@@ -24,7 +24,8 @@ class CarController extends Controller
      */
     public function create()
     {
-        //
+        $title = "Cars| Register";
+        return view('cars.register', ['title' => $title]);
     }
 
     /**
@@ -35,7 +36,12 @@ class CarController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $model = $request->input('model');
+        //$url = $request->url();
+        $input = $request->all();
+        if ($request->has('model')) {
+            dd($request->input('model'));
+        }
     }
 
     /**
