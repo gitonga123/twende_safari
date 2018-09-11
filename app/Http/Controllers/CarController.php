@@ -103,7 +103,6 @@ class CarController extends Controller
             'insurance' => 1,
             'owner' => 1,
         ));
-        var_dump($carList);
-        return json_encode($carList);
+        return response()->json($carList);
     }
 }
