@@ -23,9 +23,11 @@ class RouteServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        // 
+        parent::boot($router);
 
-        parent::boot();
+        // perform the binding
+        $router->model('event', Task::class);
     }
 
     /**
