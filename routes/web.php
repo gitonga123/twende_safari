@@ -75,3 +75,5 @@ Route::get('cars', 'CarController@create')->name('carView');
 Route::post('cars', 'CarController@store')->name('carRegister');
 Route::get('carList', 'CarController@carList')->name('carList');
 Route::get('car', 'CarController@index');
+//Resource controller binding
+Route::resource('tasks', 'TasksController');
