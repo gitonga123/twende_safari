@@ -1,4 +1,4 @@
 <footer class="container">
-    <p>&copy; Company 2017-2018</p>
+    <p>&copy; <?php echo date('Y'); ?></p>
 </footer>
 
