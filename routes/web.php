@@ -79,6 +79,11 @@ Route::get('car', 'CarController@index');
 Route::resource('tasks', 'TasksController');
 
 //Route Model Binding
-Route::get('tasks/mode/{$id}', function ($id) {
+Route::get('tasks/mode/{id}', function ($id) {
     $tasking = Task::findOrFail($id);
+});
+
+//Route Model Binding Implicit
+Route::get('tasks/mode/{tasking}', function (Task $tasking) {
+   return view('tasks.show')->with('tasking', $tasking);
 });
