@@ -77,3 +77,8 @@ Route::get('carList', 'CarController@carList')->name('carList');
 Route::get('car', 'CarController@index');
 //Resource controller binding
 Route::resource('tasks', 'TasksController');
+
+//Route Model Binding
+Route::get('tasks/mode/{$id}', function ($id) {
+    $tasking = Task::findOrFail($id);
+});
