@@ -87,3 +87,8 @@ Route::get('tasks/mode/{id}', function ($id) {
 Route::get('tasks/mode/{tasking}', function (Task $tasking) {
    return view('tasks.show')->with('tasking', $tasking);
 });
+
+//Custom Route Model Binding
+Route::get('tasks/models/{event}', function (Task $event) {
+    return view('events.show')->with('event', $event);
+});
